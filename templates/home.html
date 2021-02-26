@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>CDK Global Test</title>
-</head>
-  <body>
-       <div class="row">
-          <form action="#" method="POST">
-              <div class="row">
-                      <textarea id="commentInput" name="comment"></textarea>
-                  <div>
-                      <input type="submit" class="btn" value="Add">
-                  </div>
-              </div>
-          </form>
-      </div>
-    </body>
+  <head>
+      <title>CDK Global Test</title>
+    </head>
+        <body>
+            <h1>CDK Global Customer Portal Technical Test</h1>
+              <h5>Comments:</h5>
+                <div class="row">
+                    <div class="col">
+                            {% for c in items['Comments'] %}
+                                <h6>{{c['CommentBody']}}</h6>
+                                <p>{{c['CreatedBy']}}</p>
+                            {% endfor %}
+                    </div>
+                </div>
+                 <div class="row">
+                    <form action="#" method="POST">
+                        <div class="row">
+                              <textarea id="commentInput" name="comment"></textarea>
+                                <label for="commentInput">Add Comment</label>
+                            <div>
+                                <input type="submit" class="btn" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+          </body>
 </html>
