@@ -1,0 +1,40 @@
+[
+    {
+        "CaseNumber": "00234542",
+        "Subject": "My car won't start",
+        "Description": "Can you please help? My car won't start.\n\nThere is a funny noise coming from the engine.",
+        "Status": "Work In Progress",
+        "CreatedDate": "2018-10-15T09:03:05.000Z",
+        "LastModifiedDate": "2018-10-15T16:21:05.000Z",
+        "Owner": {
+            "FirstName": "Herby",
+            "LastName": "Cobbled"
+        },
+        "Contact": {
+            "FirstName": "Tristan",
+            "LastName": "Rayner",
+            "Email": "trayner@example.com",
+            "Phone": "+442015849404"
+        }, 
+        "Priority": "P2",
+        "Product": "A-Class",
+        "ProductGroup": "Mercedes-Benz",
+        "Impact": "High",
+        "Severity": "Critical",
+        "VIP": true,
+        "Comments": [
+            {
+                "CommentBody": "Hey Tristan, just to say I've picked up your case!<br />Can you please let me know if there is any <strong>smoke</strong> coming out of the engine?",
+                "CommentDate": "2018-10-15T16:27:05.000Z",
+                "CreatedBy": "Herby Cobbled",
+                "Id": "C-2"
+            },
+            {
+                "CommentBody": "Can you please help?! I need to get to work tomorrow.",
+                "CommentDate": "2018-10-15T14:11:05.000Z",
+                "CreatedBy": "Tristan Rayner",
+                "Id": "C-1"
+            }
+        ]
+    }
+]
