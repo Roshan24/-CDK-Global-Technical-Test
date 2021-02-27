@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>CDK Global Test</title>
-    </head>
-        <body>
-            <h1>CDK Global Customer Portal Technical Test</h1>
-              <h5>Comments:</h5>
+<head>
+    <title>CDK Global Test</title>
+</head>
+<body>
+
+    <div class="container ">
+        <div class="card">
+            <h2 class="center">CDK Global Customer Portal Technical Test</h2>
+            <div>
+                <div class="row">
+                    <div>
+                        <h6><b>Case Number: </b> <span>{{items['CaseNumber']}}</span></h6>
+
+                        <h6><b>Created Date: </b><span>{{items['CreatedDate']}}</span></h6>
+
+                        <h6><b>Last Modified Date: </b><span>{{items['LastModifiedDate']}}</span></h6>
+
+                        <h6><b>Owner: </b><span>{{items['Owner']['FirstName'] + " " + items['Owner']['LastName']}}</span></h6>
+
+                        <h6><b>Subject: </b><span>{{items['Subject']}}</span></h6>
+
+                        <h6><b>Status: </b><span>{{items['Status']}}</span></h6>
+
+                        <h6><b>Description: </b>{{items['Description']}}</h6>
+
+                        <h6><b>Contact: </b><span>{{items['Contact']['FirstName'] + " " + items['Contact']['LastName']}}</span></h6>
+
+                        <h6><b>Email: </b><span>{{items['Contact']['Email']}}</span></h6>
+
+                        <h6><b>Phone Number: </b><span>{{items['Contact']['Phone']}}</span></h6>
+
+                        <h6><b>Product: </b><span>{{items['ProductGroup']+" "+items['Product']}}</span></h6>
+
+                        <h6><b>VIP: </b><span>{{items['VIP']}}</span></h6>
+
+                        <h6><b>Priority: </b><span>{{items['Priority']}}</span></h6>
+
+                        <h6><b>Impact: </b><span>{{items['Impact']}}</span></h6>
+
+                        <h6><b>Severity: </b><span>{{items['Severity']}}</span></h6>
+                    </div>
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col">
+                        <h6><b>Comments:</b></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul>
                             {% for c in items['Comments'] %}
+                            <li>
                                 <h6>{{c['CommentBody']}}</h6>
-                                <p>{{c['CreatedBy']}}</p>
+                                <p><b>By: </b>{{c['CreatedBy']}}</p>
+                            </li>
                             {% endfor %}
+                        </ul>
                     </div>
                 </div>
                  <div class="row">
                     <form action="#" method="POST">
                         <div class="row">
-                              <textarea id="commentInput" name="comment"></textarea>
+                                <textarea id="commentInput" name="comment"></textarea>
                                 <label for="commentInput">Add Comment</label>
                             <div>
                                 <input type="submit" class="btn" value="Add">
@@ -25,5 +71,8 @@
                         </div>
                     </form>
                 </div>
-          </body>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
