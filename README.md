@@ -1,6 +1,12 @@
 # -CDK-Global-Technical-Test
 CDK Global Customer Portal Technical Test
 
+Dependencies:
+- Python Flask
+> $ pip install Flask
+- Python version 3.9
+https://www.python.org/downloads/
+
 
 Instructions:
 1. Open Command Prompt (Windows)/ Terminal (macOS)
@@ -12,4 +18,6 @@ Instructions:
 
 *This will run the script and host a local server on port: 5000*
 
-6.To access the solution, navigate to a browser of your choice and enter the IP address:  127.0.0.1:5000
+6. To access the solution, navigate to a browser of your choice and enter the IP address:  127.0.0.1:5000
+
+Reasoning:
