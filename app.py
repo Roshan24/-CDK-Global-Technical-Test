@@ -5,7 +5,7 @@ import datetime
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     newComment = {}
     with open('cases.json', 'r') as jFile:
@@ -17,8 +17,8 @@ def home():
         if request.form['comment'] != "" and request.form['comment'] != None:
             newComment['CommentBody'] = request.form['comment']
             newComment['CommentDate'] = datetime.datetime.now().isoformat()
-            newComment['CreatedBy'] = 'john test'
-            newComment['Id'] = "c-"
+            newComment['CreatedBy'] = items['Owner']['FirstName']+" "+items['Owner']['LastName']
+            newComment['Id'] = "C-" + str(len(items['Comments'])+1)
 
             items['Comments'].append(newComment)
             items['LastModifiedDate'] = datetime.datetime.now().isoformat()
@@ -26,7 +26,11 @@ def home():
             data[0] = items
 
             with open('cases.json', 'w') as outfile:
-                json.dump(data, outfile)
+                json.dump(data, outfile, indent=4)
                 outfile.close()
 
     return render_template("home.html", items=items)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
